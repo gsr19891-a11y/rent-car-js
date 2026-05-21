@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+ <header id="mainHeader">
+    <a href="index.html" id="logo"><h1>MORENT</h1></a>
+    <div id="authBlock">
+        <button id="register">რეგისტრაცია</button>
+    </div>
+ </header>
+
+  <main id="registerMain">
+        <section id="registerSection">
+            <form id="registrationForm">
+                <div class="input-group">
+                    <input type="number" id="phoneInput" placeholder=" " name="phoneNumber" required>
+                    <label for="phoneInput">ტელეფონის ნომერი</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" id="firstNameInput" placeholder=" " name="firstName" required>
+                    <label for="firstNameInput">სახელი</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="lastNameInput" placeholder=" " name="lastName" required>
+                    <label for="lastNameInput">გვარი</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="emailInput" placeholder=" " name="email" required>
+                    <label for="emailInput">მეილი</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="passwordInput" placeholder="" name="password" required>
+                    <label for="passwordInput">პაროლი</label>
+                </div>
+
+                <button type="submit" class="reg-submit-btn">რეგისტრაცია <i class="fa-regular fa-circle-right"></i></button>
+
+                <a href="#" class="login-link">უკვე ავტორიზებული ხართ? <br>
+                შედით თქვენი ანგარიშით</a>
+            </form>
+
+            <img src="/Image/regBg.png" alt="Image" class="log-img">
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

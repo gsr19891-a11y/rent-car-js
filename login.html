@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="mainHeader">
+      <a href="index.html" id="logo"><h1>MORENT</h1></a>
+      <div id="authBlock">
+        <button id="register">რეგისტრაცია</button>
+      </div>
+    </header>
+
+    <main id="loginMain">
+      <section id="loginSection">
+        <form id="loginForm">
+          <div class="input-group">
+            <input
+              type="number"
+              id="phoneInput"
+              placeholder=" "
+              required
+              name="phoneNumber"
+            />
+            <label for="phoneInput">ტელეფონის ნომერი</label>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="password"
+              id="passwordInput"
+              placeholder=""
+              required
+              name="password"
+            />
+            <label for="passwordInput">პაროლი</label>
+          </div>
+
+          <button type="submit" class="log-submit-btn">
+            შესვლა <i class="fa-regular fa-circle-right"></i>
+          </button>
+        </form>
+
+        <img
+          src="/Image/Screenshot (213).png"
+          alt="Login Image"
+          class="log-img"
+        />
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+#mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  padding: 50px 120px;
+  background-color: rgb(233, 233, 233);
+}
+#mainHeader .user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+#mainHeader .user-profile i {
+  color: #505050;
+  font-size: 20px;
+  cursor: pointer;
+}
+#mainHeader .user-profile .logout-btn {
+  cursor: pointer;
+  padding: 10px;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: rgb(216, 101, 19);
+}
+#mainHeader #logo {
+  color: rgb(63, 113, 255);
+  font-size: 28px;
+}
+#mainHeader #messagesPanel {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  overflow: hidden;
+}
+#mainHeader #register {
+  border: 0;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgb(63, 113, 255);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 3px;
+  transition: all 0.3s ease-in-out;
+}
+#mainHeader #register:hover {
+  cursor: pointer;
+  background-color: blue;
+}
+
+#filterToggleBtn {
+  display: none;
+}
+
+#homeMain {
+  width: 100%;
+  padding: 50px 120px;
+}
+#homeMain .h2-text {
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+#homeMain .container-1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10%;
+  margin-bottom: 140px;
+}
+#homeMain .container-1 #rentCard,
+#homeMain .container-1 #rentCard1 {
+  background-color: antiquewhite;
+  width: 100%;
+  height: 600px;
+  padding: 50px 70px;
+  border-radius: 10px;
+  background-image: url(/Image/Gemini_Generated_Image_u1crefu1crefu1cr.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+}
+#homeMain .container-1 #rentCard:hover,
+#homeMain .container-1 #rentCard :focus,
+#homeMain .container-1 #rentCard1:hover,
+#homeMain .container-1 #rentCard1 :focus {
+  transform: scale(1.01);
+}
+#homeMain .container-1 #rentCard .bigH1,
+#homeMain .container-1 #rentCard1 .bigH1 {
+  font-size: 35px;
+  color: white;
+}
+#homeMain .container-1 #rentCard .littleH1,
+#homeMain .container-1 #rentCard1 .littleH1 {
+  font-size: 30px;
+  color: white;
+}
+#homeMain .container-1 #rentCard .pTeg,
+#homeMain .container-1 #rentCard1 .pTeg {
+  font-size: 30px;
+  color: white;
+  width: 70%;
+  margin-top: 80px;
+}
+#homeMain .container-1 #rentCard #rentBtn,
+#homeMain .container-1 #rentCard1 #rentBtn {
+  margin-top: 20px;
+  border: 0;
+  padding: 15px 25px;
+  border-radius: 10px;
+  background-color: rgb(63, 113, 255);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 3px;
+  transition: all 0.3s ease-in-out;
+}
+#homeMain .container-1 #rentCard #rentBtn:hover, #homeMain .container-1 #rentCard #rentBtn:focus,
+#homeMain .container-1 #rentCard1 #rentBtn:hover,
+#homeMain .container-1 #rentCard1 #rentBtn:focus {
+  cursor: pointer;
+  background-color: rgb(63, 113, 255);
+}
+#homeMain #rentCard1 {
+  background-image: url(/Image/Gemini_Generated_Image_ct42e7ct42e7ct42.png) !important;
+}
+#homeMain #rentCard1 .rentBtn {
+  background-color: rgb(91, 171, 251) !important;
+}
+#homeMain #rentCard1 .rentBtn:hover {
+  background-color: rgb(63, 113, 255) !important;
+}
+#homeMain .cont-position {
+  width: 100%;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+#homeMain .cont-position .car-card .car-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+#homeMain .cont-position .car-card .car-card-header i {
+  font-size: 30px;
+  color: gray;
+  cursor: pointer;
+}
+#homeMain .cont-position .car-card .car-card-header i:hover, #homeMain .cont-position .car-card .car-card-header i:focus {
+  color: red;
+}
+#homeMain .cont-position .car-card .car-card-header p {
+  font-size: 20px;
+}
+#homeMain .cont-position .car-card .car-card-header h3 {
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+#homeMain .cont-position .car-card-specs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+#homeMain .cont-position .car-card-specs p,
+#homeMain .cont-position .car-card-specs span {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+}
+#homeMain .cont-position .car-card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+#homeMain .cont-position .car-card-footer span {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+}
+#homeMain .cont-position .car-card-footer .price-val {
+  font-size: 30px;
+  color: rgb(63, 113, 255);
+}
+#homeMain .cont-position .car-card-footer .btn-rent {
+  font-size: 25px;
+  background-color: #3563e9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#homeMain .cont-position .car-card-footer .btn-rent:hover, #homeMain .cont-position .car-card-footer .btn-rent:focus {
+  background-color: #2b52cc;
+}
+#homeMain .cont-position .car-cont {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 700px;
+  justify-content: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 30px;
+}
+#homeMain .cont-position .car-cont .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgb(233, 233, 233);
+  transition: all 0.3s ease-in-out;
+}
+#homeMain .cont-position .car-cont .card:hover, #homeMain .cont-position .car-cont .card:focus {
+  transform: translateY(-20px);
+}
+#homeMain .cont-position .car-cont .card .img-cont {
+  width: 100%;
+  height: 400px;
+}
+#homeMain .cont-position .car-cont .card .img-cont .car-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#registerMain,
+#loginMain {
+  padding: 0 120px;
+  width: 100%;
+  background-color: white;
+}
+#registerMain #registerSection,
+#registerMain #loginSection,
+#loginMain #registerSection,
+#loginMain #loginSection {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#registerMain #registerSection #registrationForm,
+#registerMain #registerSection #loginForm,
+#registerMain #loginSection #registrationForm,
+#registerMain #loginSection #loginForm,
+#loginMain #registerSection #registrationForm,
+#loginMain #registerSection #loginForm,
+#loginMain #loginSection #registrationForm,
+#loginMain #loginSection #loginForm {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#registerMain #registerSection #registrationForm img,
+#registerMain #registerSection #loginForm img,
+#registerMain #loginSection #registrationForm img,
+#registerMain #loginSection #loginForm img,
+#loginMain #registerSection #registrationForm img,
+#loginMain #registerSection #loginForm img,
+#loginMain #loginSection #registrationForm img,
+#loginMain #loginSection #loginForm img {
+  width: 50%;
+}
+#registerMain #registerSection #registrationForm .reg-submit-btn,
+#registerMain #registerSection #registrationForm .log-submit-btn,
+#registerMain #registerSection #loginForm .reg-submit-btn,
+#registerMain #registerSection #loginForm .log-submit-btn,
+#registerMain #loginSection #registrationForm .reg-submit-btn,
+#registerMain #loginSection #registrationForm .log-submit-btn,
+#registerMain #loginSection #loginForm .reg-submit-btn,
+#registerMain #loginSection #loginForm .log-submit-btn,
+#loginMain #registerSection #registrationForm .reg-submit-btn,
+#loginMain #registerSection #registrationForm .log-submit-btn,
+#loginMain #registerSection #loginForm .reg-submit-btn,
+#loginMain #registerSection #loginForm .log-submit-btn,
+#loginMain #loginSection #registrationForm .reg-submit-btn,
+#loginMain #loginSection #registrationForm .log-submit-btn,
+#loginMain #loginSection #loginForm .reg-submit-btn,
+#loginMain #loginSection #loginForm .log-submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+  border: 0;
+  padding: 25px 25px;
+  border-radius: 10px;
+  background-color: rgb(0, 68, 255);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 3px;
+  transition: all 0.3s ease-in-out;
+}
+#registerMain #registerSection #registrationForm .reg-submit-btn i,
+#registerMain #registerSection #registrationForm .log-submit-btn i,
+#registerMain #registerSection #loginForm .reg-submit-btn i,
+#registerMain #registerSection #loginForm .log-submit-btn i,
+#registerMain #loginSection #registrationForm .reg-submit-btn i,
+#registerMain #loginSection #registrationForm .log-submit-btn i,
+#registerMain #loginSection #loginForm .reg-submit-btn i,
+#registerMain #loginSection #loginForm .log-submit-btn i,
+#loginMain #registerSection #registrationForm .reg-submit-btn i,
+#loginMain #registerSection #registrationForm .log-submit-btn i,
+#loginMain #registerSection #loginForm .reg-submit-btn i,
+#loginMain #registerSection #loginForm .log-submit-btn i,
+#loginMain #loginSection #registrationForm .reg-submit-btn i,
+#loginMain #loginSection #registrationForm .log-submit-btn i,
+#loginMain #loginSection #loginForm .reg-submit-btn i,
+#loginMain #loginSection #loginForm .log-submit-btn i {
+  font-size: 20px;
+}
+#registerMain #registerSection #registrationForm .reg-submit-btn:hover, #registerMain #registerSection #registrationForm .reg-submit-btn:focus,
+#registerMain #registerSection #registrationForm .log-submit-btn:hover,
+#registerMain #registerSection #registrationForm .log-submit-btn:focus,
+#registerMain #registerSection #loginForm .reg-submit-btn:hover,
+#registerMain #registerSection #loginForm .reg-submit-btn:focus,
+#registerMain #registerSection #loginForm .log-submit-btn:hover,
+#registerMain #registerSection #loginForm .log-submit-btn:focus,
+#registerMain #loginSection #registrationForm .reg-submit-btn:hover,
+#registerMain #loginSection #registrationForm .reg-submit-btn:focus,
+#registerMain #loginSection #registrationForm .log-submit-btn:hover,
+#registerMain #loginSection #registrationForm .log-submit-btn:focus,
+#registerMain #loginSection #loginForm .reg-submit-btn:hover,
+#registerMain #loginSection #loginForm .reg-submit-btn:focus,
+#registerMain #loginSection #loginForm .log-submit-btn:hover,
+#registerMain #loginSection #loginForm .log-submit-btn:focus,
+#loginMain #registerSection #registrationForm .reg-submit-btn:hover,
+#loginMain #registerSection #registrationForm .reg-submit-btn:focus,
+#loginMain #registerSection #registrationForm .log-submit-btn:hover,
+#loginMain #registerSection #registrationForm .log-submit-btn:focus,
+#loginMain #registerSection #loginForm .reg-submit-btn:hover,
+#loginMain #registerSection #loginForm .reg-submit-btn:focus,
+#loginMain #registerSection #loginForm .log-submit-btn:hover,
+#loginMain #registerSection #loginForm .log-submit-btn:focus,
+#loginMain #loginSection #registrationForm .reg-submit-btn:hover,
+#loginMain #loginSection #registrationForm .reg-submit-btn:focus,
+#loginMain #loginSection #registrationForm .log-submit-btn:hover,
+#loginMain #loginSection #registrationForm .log-submit-btn:focus,
+#loginMain #loginSection #loginForm .reg-submit-btn:hover,
+#loginMain #loginSection #loginForm .reg-submit-btn:focus,
+#loginMain #loginSection #loginForm .log-submit-btn:hover,
+#loginMain #loginSection #loginForm .log-submit-btn:focus {
+  cursor: pointer;
+  background-color: rgb(63, 113, 255);
+}
+#registerMain #registerSection #registrationForm .input-group,
+#registerMain #registerSection #loginForm .input-group,
+#registerMain #loginSection #registrationForm .input-group,
+#registerMain #loginSection #loginForm .input-group,
+#loginMain #registerSection #registrationForm .input-group,
+#loginMain #registerSection #loginForm .input-group,
+#loginMain #loginSection #registrationForm .input-group,
+#loginMain #loginSection #loginForm .input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+#registerMain #registerSection #registrationForm .input-group input,
+#registerMain #registerSection #loginForm .input-group input,
+#registerMain #loginSection #registrationForm .input-group input,
+#registerMain #loginSection #loginForm .input-group input,
+#loginMain #registerSection #registrationForm .input-group input,
+#loginMain #registerSection #loginForm .input-group input,
+#loginMain #loginSection #registrationForm .input-group input,
+#loginMain #loginSection #loginForm .input-group input {
+  width: 100%;
+  height: 80px;
+  padding: 20px 16px 10px 16px;
+  background: #f6f7f9;
+  border: 1px solid rgba(195, 212, 233, 0.4);
+  border-radius: 10px;
+  font-size: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+#registerMain #registerSection #registrationForm .input-group input:focus,
+#registerMain #registerSection #loginForm .input-group input:focus,
+#registerMain #loginSection #registrationForm .input-group input:focus,
+#registerMain #loginSection #loginForm .input-group input:focus,
+#loginMain #registerSection #registrationForm .input-group input:focus,
+#loginMain #registerSection #loginForm .input-group input:focus,
+#loginMain #loginSection #registrationForm .input-group input:focus,
+#loginMain #loginSection #loginForm .input-group input:focus {
+  border-color: rgb(0, 68, 255);
+  background: white;
+}
+#registerMain #registerSection #registrationForm .input-group input:not(:-moz-placeholder) + label, #registerMain #registerSection #loginForm .input-group input:not(:-moz-placeholder) + label, #registerMain #loginSection #registrationForm .input-group input:not(:-moz-placeholder) + label, #registerMain #loginSection #loginForm .input-group input:not(:-moz-placeholder) + label, #loginMain #registerSection #registrationForm .input-group input:not(:-moz-placeholder) + label, #loginMain #registerSection #loginForm .input-group input:not(:-moz-placeholder) + label, #loginMain #loginSection #registrationForm .input-group input:not(:-moz-placeholder) + label, #loginMain #loginSection #loginForm .input-group input:not(:-moz-placeholder) + label {
+  top: 8px;
+  left: 16px;
+  font-size: 14px;
+  color: rgb(0, 68, 255);
+  font-weight: 600;
+}
+#registerMain #registerSection #registrationForm .input-group input:focus + label, #registerMain #registerSection #registrationForm .input-group input:not(:placeholder-shown) + label,
+#registerMain #registerSection #loginForm .input-group input:focus + label,
+#registerMain #registerSection #loginForm .input-group input:not(:placeholder-shown) + label,
+#registerMain #loginSection #registrationForm .input-group input:focus + label,
+#registerMain #loginSection #registrationForm .input-group input:not(:placeholder-shown) + label,
+#registerMain #loginSection #loginForm .input-group input:focus + label,
+#registerMain #loginSection #loginForm .input-group input:not(:placeholder-shown) + label,
+#loginMain #registerSection #registrationForm .input-group input:focus + label,
+#loginMain #registerSection #registrationForm .input-group input:not(:placeholder-shown) + label,
+#loginMain #registerSection #loginForm .input-group input:focus + label,
+#loginMain #registerSection #loginForm .input-group input:not(:placeholder-shown) + label,
+#loginMain #loginSection #registrationForm .input-group input:focus + label,
+#loginMain #loginSection #registrationForm .input-group input:not(:placeholder-shown) + label,
+#loginMain #loginSection #loginForm .input-group input:focus + label,
+#loginMain #loginSection #loginForm .input-group input:not(:placeholder-shown) + label {
+  top: 8px;
+  left: 16px;
+  font-size: 14px;
+  color: rgb(0, 68, 255);
+  font-weight: 600;
+}
+#registerMain #registerSection #registrationForm .input-group label,
+#registerMain #registerSection #loginForm .input-group label,
+#registerMain #loginSection #registrationForm .input-group label,
+#registerMain #loginSection #loginForm .input-group label,
+#loginMain #registerSection #registrationForm .input-group label,
+#loginMain #registerSection #loginForm .input-group label,
+#loginMain #loginSection #registrationForm .input-group label,
+#loginMain #loginSection #loginForm .input-group label {
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  color: #414c5c;
+  font-size: 24px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+#accountPage {
+  max-width: 1800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+#accountPage .user-info-section {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+}
+#accountPage .user-info-section .profile-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+#accountPage .user-info-section .profile-card .avatar-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #3563e9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#accountPage .user-info-section .profile-card .avatar-circle #initials {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+#accountPage .user-info-section .profile-card .name-details h2 {
+  font-size: 22px;
+  color: #1a202c;
+  margin: 0;
+}
+#accountPage .account-navigation ul {
+  list-style: none;
+  padding: 0;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#accountPage .account-navigation ul li {
+  border-bottom: 1px solid rgba(144, 163, 191, 0.1);
+}
+#accountPage .account-navigation ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  text-decoration: none;
+  color: #1a202c;
+  font-weight: 600;
+  transition: 0.2s;
+}
+#accountPage .account-navigation ul li a i {
+  color: #90a3bf;
+  font-size: 18px;
+}
+#accountPage .account-navigation ul li a:hover {
+  color: #3563e9;
+  background: rgba(53, 99, 233, 0.03);
+}
+#accountPage .account-navigation ul li a:hover i {
+  color: #3563e9;
+}
+
+.cars-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+.cars-grid .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+.cars-grid .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.cars-grid .card .car-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.cars-grid .card .car-card .car-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.cars-grid .card .car-card .car-card-header .car-card-title h3 {
+  color: #1a202c;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.cars-grid .card .car-card .car-card-header .car-card-title p {
+  font-size: 14px;
+  color: #90a3bf;
+}
+.cars-grid .card .car-card .car-card-header .heart-btn {
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: #ed3f3f;
+}
+.cars-grid .card .car-card .car-card-header .heart-btn.active {
+  color: #ed3f3f;
+}
+.cars-grid .card .car-card .car-card-header .heart-btn:hover {
+  transform: scale(1.2);
+}
+.cars-grid .card .car-card .img-cont {
+  width: 100%;
+  height: 250px;
+  margin: 20px 0;
+}
+.cars-grid .card .car-card .img-cont .car-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cars-grid .card .rented-car-card {
+  width: 100%;
+}
+.cars-grid .card .car-card-specs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.cars-grid .card .car-card-specs .spec-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #90a3bf;
+}
+.cars-grid .card .car-card-specs .spec-item span {
+  white-space: nowrap;
+}
+.cars-grid .card .car-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+.cars-grid .card .car-card-footer .price-box .price-val {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a202c;
+}
+.cars-grid .card .car-card-footer .price-box .price-unit {
+  font-size: 14px;
+  color: #90a3bf;
+}
+.cars-grid .card .car-card-footer .btn-rent {
+  background-color: #3563e9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.cars-grid .card .car-card-footer .btn-rent:hover {
+  background-color: rgb(23.0803571429, 71.3392857143, 211.9196428571);
+}
+
+.content-title {
+  font-size: 24px;
+  color: #1a202c;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  margin: 40px 20% 0px 20%;
+  align-items: start;
+}
+@media (max-width: 992px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-img-cont {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.main-img-cont img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.map-section {
+  margin-top: 80px;
+  width: 100%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+}
+.map-section #carMap {
+  margin-top: 50px;
+  width: 50%;
+  height: 700px;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+.specs-grid .spec-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.specs-grid .spec-item i {
+  color: #3563e9;
+  font-size: 20px;
+}
+.specs-grid .spec-item span {
+  display: block;
+  font-size: 12px;
+  color: #90a3bf;
+}
+.specs-grid .spec-item strong {
+  font-size: 14px;
+  color: #1a202c;
+}
+
+.booking-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.booking-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: 1px solid #c3d4e9;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.total-section .final-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a202c;
+}
+.total-section .btn-confirm {
+  background: #3563e9;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.total-section .btn-confirm:hover {
+  background: #2b52cc;
+}
+
+.thumbnails-cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+.thumbnails-cont .thumb-item {
+  width: 200px;
+  height: 170px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+.thumbnails-cont .thumb-item.active {
+  border-color: #3563e9;
+}
+.thumbnails-cont .thumb-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#accountContent {
+  margin-top: 30px;
+}
+#accountContent h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.rented-car-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+.rented-car-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.rented-car-card img {
+  width: 200px;
+  height: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.rented-car-card .car-info {
+  flex: 1;
+}
+.rented-car-card .car-info h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.rented-car-card .car-info p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 14px;
+}
+.rented-car-card .total-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3563e9;
+}
+
+.filter-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.filter-box input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.filter-box button {
+  background: #3563e9;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.filter-box button:hover {
+  background: #274bc5;
+}
+.filter-box .capacity-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#carsContainer {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 500px;
+  gap: 25px;
+}
+#carsContainer .btn-rent {
+  background: #3563e9;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#carsContainer .btn-rent:hover {
+  background: #274bc5;
+}
+#carsContainer .car-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#carsContainer .car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+#carsContainer .car-card img {
+  width: 100%;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+#carsContainer .car-card h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+#carsContainer .car-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 2px 0;
+}
+#carsContainer .car-card .price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3563e9;
+}
+
+#filterMain {
+  display: flex;
+}
+
+.add-container {
+  background: #f6f7f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.add-container .add-wrapper {
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+.add-container .add-illustration {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-container .add-illustration img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+.add-container .add-illustration .capacity-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.add-container .add-form-container {
+  flex: 1;
+  padding: 40px;
+}
+.add-container .add-form-container .btn-confirm {
+  background: #3563e9;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.add-container .add-form-container .btn-confirm:hover {
+  background: #274bc5;
+}
+.add-container .add-form-container .input-group {
+  margin-bottom: 15px;
+}
+.add-container .add-form-container .input-group label {
+  display: block;
+  font-size: 14px;
+  color: #90a3bf;
+  margin-bottom: 8px;
+}
+.add-container .add-form-container .input-group select,
+.add-container .add-form-container .input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #c3d4e9;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 16px;
+  color: #1a202c;
+}
+.add-container .add-form-container .input-group select:focus,
+.add-container .add-form-container .input-group input:focus {
+  outline: none;
+  border-color: #3563e9;
+}
+
+.rent-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.rent-div .rent-img {
+  width: 50%;
+}
+.rent-div .rent-h1 {
+  font-size: 40px;
+  color: #3563e9;
+}
+.rent-div .rent-h2 {
+  font-size: 25px;
+  color: #3563e9;
+}
+.rent-div .rent-p {
+  font-size: 20px;
+  font-weight: 600;
+  color: gray;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2040px) {
+  #homeMain {
+    padding: 20px 20px;
+  }
+  #homeMain .h2-text {
+    font-size: 20px;
+  }
+  #homeMain .container-1 {
+    gap: 5%;
+    margin-bottom: 80px;
+  }
+  #homeMain .container-1 #rentCard,
+  #homeMain .container-1 #rentCard1 {
+    height: 400px;
+    padding: 10px 20px;
+  }
+  #homeMain .container-1 #rentCard .bigH1,
+  #homeMain .container-1 #rentCard1 .bigH1 {
+    font-size: 20px;
+  }
+  #homeMain .container-1 #rentCard .littleH1,
+  #homeMain .container-1 #rentCard1 .littleH1 {
+    font-size: 25px;
+  }
+  #homeMain .container-1 #rentCard .pTeg,
+  #homeMain .container-1 #rentCard1 .pTeg {
+    font-size: 25px;
+    width: 70%;
+    margin-top: 50px;
+  }
+  #homeMain .container-1 #rentCard #rentBtn,
+  #homeMain .container-1 #rentCard1 #rentBtn {
+    padding: 15px 25px;
+  }
+  #filterToggleBtn {
+    display: none;
+  }
+  .details-grid {
+    gap: 20px;
+    margin: 20px;
+  }
+  .map-section {
+    margin-top: 50px;
+    font-size: 30px;
+  }
+  .map-section #carMap {
+    margin-top: 50px;
+    height: 500px;
+  }
+  #registerMain,
+  #loginMain {
+    padding: 0 20px;
+  }
+  #registerMain img,
+  #loginMain img {
+    width: 50%;
+  }
+  #registerMain #registerSection,
+  #registerMain #loginSection,
+  #loginMain #registerSection,
+  #loginMain #loginSection {
+    margin-top: 80px;
+  }
+  #registerMain #registerSection #registrationForm,
+  #registerMain #registerSection #loginForm,
+  #registerMain #loginSection #registrationForm,
+  #registerMain #loginSection #loginForm,
+  #loginMain #registerSection #registrationForm,
+  #loginMain #registerSection #loginForm,
+  #loginMain #loginSection #registrationForm,
+  #loginMain #loginSection #loginForm {
+    width: 50%;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    padding: 50px 120px;
+    background-color: #ffffff;
+  }
+  #mainHeader .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  #mainHeader .user-profile i {
+    color: #505050;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #mainHeader .user-profile .logout-btn {
+    cursor: pointer;
+    padding: 10px;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(216, 101, 19);
+  }
+  #mainHeader #logo {
+    color: #3563e9;
+    font-size: 28px;
+  }
+  #mainHeader #carsContainer {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
+    grid-auto-rows: 500px;
+    gap: 25px;
+  }
+  #mainHeader #carsContainer .btn-rent {
+    background: #3563e9;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #mainHeader #carsContainer .btn-rent:hover {
+    background: #274bc5;
+  }
+  #mainHeader #carsContainer .car-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #mainHeader #carsContainer .car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+  #mainHeader #carsContainer .car-card img {
+    width: 100%;
+    height: 260px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 12px;
+  }
+  #mainHeader #carsContainer .car-card h3 {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  #mainHeader #carsContainer .car-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0;
+  }
+  #mainHeader #carsContainer .car-card .price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3563e9;
+  }
+  #mainHeader #register {
+    border: 0;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #3563e9;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  #mainHeader #register:hover {
+    cursor: pointer;
+    background-color: blue;
+  }
+  #filterToggleBtn {
+    display: none;
+  }
+  #homeMain {
+    padding: 20px 30px;
+  }
+  #homeMain .h2-text {
+    font-size: 20px;
+  }
+  #homeMain .container-1 {
+    grid-template-columns: 1fr;
+    gap: 5%;
+    margin-bottom: 80px;
+  }
+  #homeMain .container-1 #rentCard,
+  #homeMain .container-1 #rentCard1 {
+    height: auto;
+    padding: 10px 20px;
+  }
+  #homeMain .container-1 #rentCard .bigH1,
+  #homeMain .container-1 #rentCard1 .bigH1 {
+    font-size: 30px;
+  }
+  #homeMain .container-1 #rentCard .littleH1,
+  #homeMain .container-1 #rentCard1 .littleH1 {
+    font-size: 35px;
+  }
+  #homeMain .container-1 #rentCard .pTeg,
+  #homeMain .container-1 #rentCard1 .pTeg {
+    font-size: 35px;
+    width: 70%;
+    margin-top: 50px;
+  }
+  #homeMain .container-1 #rentCard #rentBtn,
+  #homeMain .container-1 #rentCard1 #rentBtn {
+    padding: 15px 25px;
+  }
+  .h2-text {
+    font-size: 30px !important;
+  }
+  .details-grid {
+    gap: 20px;
+    margin: 0px;
+  }
+  .map-section {
+    margin-top: 50px;
+    font-size: 30px;
+  }
+  .map-section #carMap {
+    margin-top: 50px;
+    height: 500px;
+  }
+  #registerMain,
+  #loginMain {
+    padding: 0 20px;
+  }
+  #registerMain img,
+  #loginMain img {
+    width: 50%;
+  }
+  #registerMain #registerSection,
+  #registerMain #loginSection,
+  #loginMain #registerSection,
+  #loginMain #loginSection {
+    margin-top: 80px;
+  }
+  #registerMain #registerSection #registrationForm,
+  #registerMain #registerSection #loginForm,
+  #registerMain #loginSection #registrationForm,
+  #registerMain #loginSection #loginForm,
+  #loginMain #registerSection #registrationForm,
+  #loginMain #registerSection #loginForm,
+  #loginMain #loginSection #registrationForm,
+  #loginMain #loginSection #loginForm {
+    width: 50%;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 368px) and (max-width: 767px) {
+  #mainHeader {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    background-color: #ffffff;
+    position: relative;
+  }
+  #mainHeader .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  #mainHeader .user-profile i {
+    color: #505050;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #mainHeader .user-profile .logout-btn {
+    cursor: pointer;
+    padding: 10px;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgb(216, 101, 19);
+  }
+  #mainHeader #logo {
+    color: #3563e9;
+    font-size: 28px;
+  }
+  #mainHeader #register {
+    border: 0;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #3563e9;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  #mainHeader #register:hover {
+    cursor: pointer;
+    background-color: blue;
+  }
+  .filter-box {
+    display: none;
+  }
+  #homeMain {
+    padding: 10px;
+    margin: 0 !important;
+  }
+  #homeMain .cont-position {
+    padding: 0;
+  }
+  #homeMain .h2-text {
+    font-size: 18px;
+  }
+  #homeMain .container-1 {
+    grid-template-columns: 1fr;
+    gap: 5%;
+    margin-bottom: 80px;
+  }
+  #homeMain .container-1 #rentCard,
+  #homeMain .container-1 #rentCard1 {
+    height: auto;
+    padding: 10px 20px;
+  }
+  #homeMain .container-1 #rentCard .bigH1,
+  #homeMain .container-1 #rentCard1 .bigH1 {
+    font-size: 25px;
+  }
+  #homeMain .container-1 #rentCard .littleH1,
+  #homeMain .container-1 #rentCard1 .littleH1 {
+    font-size: 25px;
+  }
+  #homeMain .container-1 #rentCard .pTeg,
+  #homeMain .container-1 #rentCard1 .pTeg {
+    font-size: 20px;
+    width: 70%;
+    margin-top: 50px;
+  }
+  #homeMain .container-1 #rentCard #rentBtn,
+  #homeMain .container-1 #rentCard1 #rentBtn {
+    padding: 15px 25px;
+  }
+  .h2-text {
+    font-size: 30px !important;
+  }
+  #filterMain {
+    flex-direction: column;
+  }
+  #filterToggleBtn {
+    font-size: 25px;
+  }
+  #carsContainer {
+    flex: 1;
+    display: grid;
+    grid-auto-rows: 500px;
+    gap: 25px;
+    padding: 5px;
+  }
+  #carsContainer .btn-rent {
+    background: #3563e9;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  #carsContainer .btn-rent:hover {
+    background: #274bc5;
+  }
+  #carsContainer .car-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #carsContainer .car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+  #carsContainer .car-card span {
+    font-size: 15px !important;
+  }
+  #carsContainer .car-card img {
+    width: 100%;
+    height: 260px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 12px;
+  }
+  #carsContainer .car-card h3 {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  #carsContainer .car-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0;
+  }
+  #carsContainer .car-card .price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3563e9;
+  }
+  #messagesPanel {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    width: 80% !important;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    overflow: hidden;
+    font-size: 15px !important;
+  }
+  #messagesPanel span {
+    font-size: 15px !important;
+  }
+  .add-illustration {
+    display: none !important;
+  }
+  .car-cont {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) !important;
+    grid-auto-rows: auto !important;
+    justify-content: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    row-gap: 10px !important;
+  }
+  .car-cont .card {
+    margin: 0 !important;
+    width: 100%;
+    display: block !important;
+    flex-direction: column;
+    padding: 5px !important;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+  .car-cont .card .btn-rent {
+    font-size: 15px !important;
+  }
+  .car-cont .card p {
+    font-size: 15px !important;
+  }
+  .car-cont .card span {
+    font-size: 15px !important;
+  }
+  .car-cont .card:hover, .car-cont .card:focus {
+    transform: translateY(-5px) !important;
+  }
+  .car-cont .card:hover .car-img, .car-cont .card:focus .car-img {
+    width: 80% !important;
+    height: auto !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .cars-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 30px;
+    padding: 20px 0;
+  }
+  .cars-grid .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  .cars-grid .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .cars-grid .card .car-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .cars-grid .card .car-card .car-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .cars-grid .card .car-card .car-card-header .car-card-title h3 {
+    color: #1a202c;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .cars-grid .card .car-card .car-card-header .car-card-title p {
+    font-size: 14px;
+    color: #90a3bf;
+  }
+  .cars-grid .card .car-card .car-card-header .heart-btn {
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #ed3f3f;
+  }
+  .cars-grid .card .car-card .car-card-header .heart-btn.active {
+    color: #ed3f3f;
+  }
+  .cars-grid .card .car-card .car-card-header .heart-btn:hover {
+    transform: scale(1.2);
+  }
+  .cars-grid .card .car-card .img-cont {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0;
+  }
+  .cars-grid .card .car-card .img-cont .car-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .cars-grid .card .car-card-specs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .cars-grid .card .car-card-specs .spec-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #90a3bf;
+  }
+  .cars-grid .card .car-card-specs .spec-item span {
+    font-size: 17px !important;
+    white-space: nowrap;
+  }
+  .cars-grid .card .car-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  .cars-grid .card .car-card-footer .price-box .price-val {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a202c;
+  }
+  .cars-grid .card .car-card-footer .price-box .price-unit {
+    font-size: 14px;
+    color: #90a3bf;
+  }
+  .cars-grid .card .car-card-footer .btn-rent {
+    background-color: #3563e9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .cars-grid .card .car-card-footer .btn-rent:hover {
+    background-color: rgb(23.0803571429, 71.3392857143, 211.9196428571);
+  }
+  .add-form-container {
+    padding: 0px !important;
+  }
+  .details-grid {
+    gap: 15px;
+    margin: 5px;
+  }
+  .details-grid .main-img-cont {
+    width: 100%;
+  }
+  .details-grid .thumbnails-cont {
+    justify-content: center;
+  }
+  .details-grid .thumbnails-cont .thumb-item {
+    width: 40%;
+    height: auto;
+  }
+  .rent-div .rent-img {
+    width: 80%;
+  }
+  .rent-div .rent-h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .rent-div .rent-h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .rent-div .rent-p {
+    text-align: center;
+    font-size: 15px;
+  }
+  #filterToggleBtn {
+    display: flex;
+  }
+  .map-section {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+  .map-section #carMap {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 400px;
+  }
+  .details-info {
+    width: 100%;
+    height: auto;
+  }
+  .details-info span {
+    font-size: 15px !important;
+  }
+  .details-info .specs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .rented-car-card {
+    display: flex;
+    flex-direction: column !important;
+    gap: 20px;
+    align-items: center;
+    background: #ffffff;
+    padding: 0px !important;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+  }
+  .rented-car-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  .rented-car-card img {
+    width: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .rented-car-card .car-info h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .rented-car-card .car-info p {
+    margin: 4px 0;
+    color: #555;
+    font-size: 14px;
+  }
+  .rented-car-card .total-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3563e9;
+  }
+  #bellBadge {
+    width: 12px !important;
+    font-size: 14px !important;
+    height: 12px !important;
+  }
+  #registerMain,
+  #loginMain {
+    padding: 0 20px;
+  }
+  #registerMain #registerSection,
+  #registerMain #loginSection,
+  #loginMain #registerSection,
+  #loginMain #loginSection {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  #registerMain #registerSection .log-img,
+  #registerMain #loginSection .log-img,
+  #loginMain #registerSection .log-img,
+  #loginMain #loginSection .log-img {
+    display: none;
+  }
+  #registerMain #registerSection #registrationForm,
+  #registerMain #registerSection #loginForm,
+  #registerMain #loginSection #registrationForm,
+  #registerMain #loginSection #loginForm,
+  #loginMain #registerSection #registrationForm,
+  #loginMain #registerSection #loginForm,
+  #loginMain #loginSection #registrationForm,
+  #loginMain #loginSection #loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  span {
+    font-size: 25px !important;
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 0) and (max-width: 367px) {
+  #mainHeader {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    position: relative;
+  }
+  #mainHeader .user-profile {
+    display: flex;
+    flex-wrap: wrap !important;
+    align-items: center;
+    gap: 5px;
+  }
+  #mainHeader .user-profile i {
+    color: #505050;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #mainHeader .user-profile .logout-btn {
+    cursor: pointer;
+    padding: 10px;
+    border: 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: rgb(216, 101, 19);
+  }
+  #mainHeader #logo {
+    color: #3563e9;
+    font-size: 20px;
+  }
+  #mainHeader #register {
+    border: 0;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: #3563e9;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  #mainHeader #register:hover {
+    cursor: pointer;
+    background-color: blue;
+  }
+  .rent-div .rent-img {
+    width: 100%;
+  }
+  .rent-div .rent-h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .rent-div .rent-h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+  .rent-div .rent-p {
+    text-align: center;
+    font-size: 15px;
+  }
+  #filterToggleBtn {
+    display: flex;
+  }
+  #filterMain {
+    flex-direction: column;
+  }
+  .filter-box {
+    display: none;
+  }
+  #homeMain {
+    padding: 10px !important;
+    margin: 0 !important;
+  }
+  #homeMain .cont-position {
+    padding: 0 !important;
+  }
+  #homeMain .h2-text {
+    font-size: 20px;
+  }
+  #homeMain .container-1 {
+    grid-template-columns: 1fr;
+    gap: 5%;
+    margin-bottom: 80px;
+  }
+  #homeMain .container-1 #rentCard,
+  #homeMain .container-1 #rentCard1 {
+    height: auto;
+    padding: 10px 20px;
+  }
+  #homeMain .container-1 #rentCard .bigH1,
+  #homeMain .container-1 #rentCard1 .bigH1 {
+    font-size: 20px;
+  }
+  #homeMain .container-1 #rentCard .littleH1,
+  #homeMain .container-1 #rentCard1 .littleH1 {
+    font-size: 20px;
+  }
+  #homeMain .container-1 #rentCard .pTeg,
+  #homeMain .container-1 #rentCard1 .pTeg {
+    font-size: 20px;
+    width: 70%;
+    margin-top: 50px;
+  }
+  #homeMain .container-1 #rentCard #rentBtn,
+  #homeMain .container-1 #rentCard1 #rentBtn {
+    padding: 10px 20px;
+  }
+  .h2-text {
+    font-size: 30px !important;
+  }
+  .add-illustration {
+    display: none !important;
+  }
+  .car-card .car-card-header {
+    padding: 10px;
+  }
+  .car-card .car-card-header i {
+    font-size: 20px !important;
+  }
+  .car-card .car-card-header i:hover, .car-card .car-card-header i:focus {
+    color: red;
+  }
+  .car-card .car-card-header p {
+    font-size: 17px !important;
+  }
+  .car-card .car-card-header h3 {
+    color: #1a202c;
+    font-size: 20px !important;
+    margin-bottom: 20px;
+  }
+  .car-card-specs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .car-card-specs p,
+  .car-card-specs span {
+    font-size: 25px;
+    color: #1a202c;
+  }
+  .car-card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .car-card-footer span {
+    font-size: 15px !important;
+  }
+  .car-card-footer .price-val {
+    font-size: 20px !important;
+    color: #3563e9;
+  }
+  .car-card-footer .btn-rent {
+    font-size: 20px !important;
+    background-color: #3563e9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .car-card-footer .btn-rent:hover, .car-card-footer .btn-rent:focus {
+    background-color: #2b52cc;
+  }
+  .car-cont {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) !important;
+    grid-auto-rows: 500px !important;
+    justify-content: center;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 10px;
+  }
+  .car-cont .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px !important;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+  }
+  .car-cont .card span {
+    font-size: 15px !important;
+  }
+  .car-cont .card:hover, .car-cont .card:focus {
+    transform: translateY(-20px);
+  }
+  .car-cont .card .img-cont {
+    width: 100%;
+    height: 200px !important;
+  }
+  .car-cont .card .img-cont .car-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .details-grid {
+    gap: 5px;
+    margin: 0px;
+  }
+  .details-grid .main-img-cont {
+    width: 100%;
+    padding: 10px;
+  }
+  .details-grid .thumbnails-cont {
+    justify-content: center;
+  }
+  .details-grid .thumbnails-cont .thumb-item {
+    width: 40%;
+    height: auto;
+  }
+  .log-img {
+    display: none;
+  }
+  #registerMain,
+  #loginMain {
+    padding: 0 20px;
+  }
+  #registerMain #registerSection,
+  #registerMain #loginSection,
+  #loginMain #registerSection,
+  #loginMain #loginSection {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+  }
+  #registerMain #registerSection .log-img,
+  #registerMain #loginSection .log-img,
+  #loginMain #registerSection .log-img,
+  #loginMain #loginSection .log-img {
+    display: none;
+  }
+  #registerMain #registerSection #registrationForm,
+  #registerMain #registerSection #loginForm,
+  #registerMain #loginSection #registrationForm,
+  #registerMain #loginSection #loginForm,
+  #loginMain #registerSection #registrationForm,
+  #loginMain #registerSection #loginForm,
+  #loginMain #loginSection #registrationForm,
+  #loginMain #loginSection #loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .map-section {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+  .map-section #carMap {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 90%;
+    height: 400px;
+  }
+  .map-section .details-info {
+    width: 100%;
+    height: auto;
+  }
+  .map-section .details-info span {
+    font-size: 15px !important;
+  }
+  .map-section .details-info .specs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .map-section .details-info .booking-card .btn-confirm {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .map-section .details-info #bellBadge {
+    width: 12px !important;
+    font-size: 14px !important;
+    height: 12px !important;
+  }
+  .map-section .details-info .add-form-container {
+    padding: 0 !important;
+  }
+  .map-section .details-info .cars-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
+    gap: 30px;
+    padding: 20px 0;
+  }
+  .map-section .details-info .cars-grid .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  .map-section .details-info .cars-grid .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .map-section .details-info .cars-grid .card .car-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .map-section .details-info .cars-grid .card .car-card .car-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .map-section .details-info .cars-grid .card .car-card .car-card-header .car-card-title h3 {
+    color: #1a202c;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .map-section .details-info .cars-grid .card .car-card .car-card-header .car-card-title p {
+    font-size: 14px;
+    color: #90a3bf;
+  }
+  .map-section .details-info .cars-grid .card .car-card .car-card-header .heart-btn {
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #ed3f3f;
+  }
+  .map-section .details-info .cars-grid .card .car-card .car-card-header .heart-btn.active {
+    color: #ed3f3f;
+  }
+  .map-section .details-info .cars-grid .card .car-card .car-card-header .heart-btn:hover {
+    transform: scale(1.2);
+  }
+  .map-section .details-info .cars-grid .card .car-card .img-cont {
+    width: 100%;
+    height: 250px;
+    margin: 20px 0;
+  }
+  .map-section .details-info .cars-grid .card .car-card .img-cont .car-img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .map-section .details-info .cars-grid .card .car-card-specs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .map-section .details-info .cars-grid .card .car-card-specs .spec-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #90a3bf;
+  }
+  .map-section .details-info .cars-grid .card .car-card-specs .spec-item span {
+    font-size: 17px !important;
+    white-space: nowrap;
+  }
+  .map-section .details-info .cars-grid .card .car-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  .map-section .details-info .cars-grid .card .car-card-footer .price-box .price-val {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a202c;
+  }
+  .map-section .details-info .cars-grid .card .car-card-footer .price-box .price-unit {
+    font-size: 14px;
+    color: #90a3bf;
+  }
+  .map-section .details-info .cars-grid .card .car-card-footer .btn-rent {
+    background-color: #3563e9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .map-section .details-info .cars-grid .card .car-card-footer .btn-rent:hover {
+    background-color: rgb(23.0803571429, 71.3392857143, 211.9196428571);
+  }
+  .map-section .details-info .rented-car-card {
+    display: flex;
+    flex-direction: column !important;
+    gap: 20px;
+    align-items: center;
+    background: #ffffff;
+    padding: 0px !important;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+  }
+  .map-section .details-info .rented-car-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  .map-section .details-info .rented-car-card img {
+    width: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+  .map-section .details-info .rented-car-card .car-info h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .map-section .details-info .rented-car-card .car-info p {
+    margin: 4px 0;
+    color: #555;
+    font-size: 14px;
+  }
+  .map-section .details-info .rented-car-card .total-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3563e9;
+  }
+  .map-section .details-info .log-img {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="mainHeader">
+      <a href="index.html" id="logo"><h1>MORENT</h1></a>
+      <div id="authBlock">
+        <button id="register">რეგისტრაცია</button>
+      </div>
+    </header>
+
+    <main class="add-container">
+      <div class="add-wrapper">
+        <div class="add-illustration">
+          <img src="/Image/Screenshot (249).png" />
+        </div>
+
+        <div class="add-form-container">
+          <form id="carForm" class="booking-card">
+            <div class="input-row">
+              <div class="input-group">
+                <label>მარკა</label>
+                <select id="brand" required onchange="window.updateModels()">
+                  <option value="" disabled selected>აირჩიეთ მარკა</option>
+                  <option value="Lamborghini">Lamborghini</option>
+                  <option value="Ferrari">Ferrari</option>
+                  <option value="Porsche">Porsche</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label>მოდელი</label>
+                <select id="model" required>
+                  <option value="" disabled selected>აირჩიეთ მოდელი</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label>წელი</label>
+                <input type="number" id="year" placeholder="2022" required />
+              </div>
+              <div class="input-group">
+                <label>ტრანსმისია</label>
+                <select id="transmission" required>
+                  <option value="ავტომატიკა">ავტომატიკა</option>
+                  <option value="მექანიკა">მექანიკა</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label>სურათი 1</label>
+              <input type="file" id="file1" accept="image/*" required />
+            </div>
+            <div class="input-group">
+              <label>სურათი 2</label>
+              <input type="file" id="file2" accept="image/*" />
+            </div>
+            <div class="input-group">
+              <label>სურათი 3</label>
+              <input type="file" id="file3" accept="image/*" />
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label>ფასი (₾)</label>
+                <input type="number" id="price" placeholder="70" required />
+              </div>
+              <div class="input-group">
+                <label>ტევადობა</label>
+                <input type="number" id="capacity" placeholder="4" required />
+              </div>
+              <div class="input-group">
+                <label>ბაკის მოცულობა (L)</label>
+                <input type="number" id="fuel" placeholder="60" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label>ქალაქი</label>
+              <input type="text" id="city" placeholder="თბილისი" required />
+            </div>
+
+            <button type="submit" class="btn-confirm">შენახვა</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

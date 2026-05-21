@@ -1,0 +1,2388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+//color--------------
+$blue: rgb(63 113 255);
+$background: rgb(233, 233, 233);
+$black: rgb(0, 0, 0);
+//--------------------
+
+//main SCSS
+#mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 180px;
+  padding: 50px 120px;
+  background-color: $background;
+
+  // .menuBtn{
+  // display: none;}
+  // // .burgerDiv{
+  // // display: none;}
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    i {
+      color: #505050;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .logout-btn {
+      cursor: pointer;
+      padding: 10px;
+      border: 0;
+      color: white;
+      font-size: 20px;
+      border-radius: 10px;
+      background-color: rgb(216, 101, 19);
+    }
+  }
+
+  #logo {
+    color: $blue;
+    font-size: 28px;
+  }
+
+  #messagesPanel {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    overflow: hidden;
+  }
+
+  #register {
+    border: 0;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: $blue;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: blue;
+    }
+  }
+}
+
+#filterToggleBtn {
+  display: none;
+}
+//main SCSS
+#homeMain {
+  width: 100%;
+  padding: 50px 120px;
+
+  .h2-text {
+    color: $black;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  .container-1 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10%;
+    margin-bottom: 140px;
+
+    #rentCard,
+    #rentCard1 {
+      background-color: antiquewhite;
+      width: 100%;
+      height: 600px;
+      padding: 50px 70px;
+      border-radius: 10px;
+      background-image: url(/Image/Gemini_Generated_Image_u1crefu1crefu1cr.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: all 0.3s ease-in-out;
+
+      &:hover,
+      :focus {
+        transform: scale(1.01);
+      }
+
+      .bigH1 {
+        font-size: 35px;
+        color: white;
+      }
+
+      .littleH1 {
+        font-size: 30px;
+        color: white;
+      }
+
+      .pTeg {
+        font-size: 30px;
+        color: white;
+        width: 70%;
+        margin-top: 80px;
+      }
+
+      #rentBtn {
+        margin-top: 20px;
+        border: 0;
+        padding: 15px 25px;
+        border-radius: 10px;
+        background-color: $blue;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 3px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          background-color: $blue;
+        }
+      }
+    }
+  }
+  #rentCard1 {
+    background-image: url(/Image/Gemini_Generated_Image_ct42e7ct42e7ct42.png) !important;
+
+    .rentBtn {
+      background-color: rgb(91 171 251) !important;
+
+      &:hover {
+        background-color: $blue !important;
+      }
+    }
+  }
+
+  .cont-position {
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+
+    .car-card {
+      .car-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        i {
+          font-size: 30px;
+          color: gray;
+          cursor: pointer;
+
+          &:hover,
+          &:focus {
+            color: red;
+          }
+        }
+
+        p {
+          font-size: 20px;
+        }
+
+        h3 {
+          color: $black;
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+      } //car-card-header
+    } //car-card
+
+    .car-card-specs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+
+      p,
+      span {
+        font-size: 25px;
+        color: $black;
+      }
+    } //car-card-specs
+
+    .car-card-footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+
+      span {
+        font-size: 25px;
+        color: $black;
+      }
+      .price-val {
+        font-size: 30px;
+        color: $blue;
+      }
+
+      .btn-rent {
+        font-size: 25px;
+        background-color: #3563e9;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover,
+        &:focus {
+          background-color: #2b52cc;
+        }
+      }
+    } //car-card-footer
+
+    .car-cont {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-auto-rows: 700px;
+      justify-content: center;
+      column-gap: 20px;
+      row-gap: 30px;
+
+      .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+        background-color: $background;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+          transform: translateY(-20px);
+        }
+
+        .img-cont {
+          width: 100%;
+          height: 400px;
+
+          .car-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          } //car-img
+        } //img-cont
+      } //card
+    } //car-cont
+  } //car-position
+} //main SCSS
+
+//register SCSS
+#registerMain,
+#loginMain {
+  padding: 0 120px;
+  width: 100%;
+  background-color: white;
+
+  #registerSection,
+  #loginSection {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #registrationForm,
+    #loginForm {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      img {
+        width: 50%;
+      }
+
+      .reg-submit-btn,
+      .log-submit-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -20px;
+        border: 0;
+        padding: 25px 25px;
+        border-radius: 10px;
+        background-color: rgb(0, 68, 255);
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 3px;
+        transition: all 0.3s ease-in-out;
+
+        i {
+          font-size: 20px;
+        }
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+          background-color: rgb(63 113 255);
+        }
+      }
+
+      .input-group {
+        position: relative;
+        margin-bottom: 25px;
+
+        input {
+          width: 100%;
+          height: 80px;
+          padding: 20px 16px 10px 16px;
+          background: #f6f7f9;
+          border: 1px solid rgba(195, 212, 233, 0.4);
+          border-radius: 10px;
+          font-size: 25px;
+
+          outline: none;
+          transition: all 0.3s ease;
+
+          &:focus {
+            border-color: rgb(0, 68, 255);
+            background: white;
+          }
+
+          &:focus + label,
+          &:not(:placeholder-shown) + label {
+            top: 8px;
+            left: 16px;
+            font-size: 14px;
+            color: rgb(0, 68, 255);
+            font-weight: 600;
+          }
+        }
+
+        label {
+          position: absolute;
+          left: 16px;
+          top: 18px;
+          color: #414c5c;
+          font-size: 24px;
+          pointer-events: none;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+//account SCSS
+
+#accountPage {
+  max-width: 1800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+
+  .user-info-section {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 10px;
+
+    .profile-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .avatar-circle {
+        width: 60px;
+        height: 60px;
+        background-color: #3563e9;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #initials {
+          color: #ffffff;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+
+      .name-details h2 {
+        font-size: 22px;
+        color: #1a202c;
+        margin: 0;
+      }
+    }
+  }
+
+  .account-navigation {
+    ul {
+      list-style: none;
+      padding: 0;
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+
+      li {
+        border-bottom: 1px solid rgba(144, 163, 191, 0.1);
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 18px 24px;
+          text-decoration: none;
+          color: #1a202c;
+          font-weight: 600;
+          transition: 0.2s;
+
+          i {
+            color: #90a3bf;
+            font-size: 18px;
+          }
+
+          &:hover {
+            color: #3563e9;
+            background: rgba(53, 99, 233, 0.03);
+
+            i {
+              color: #3563e9;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+$blue: #3563e9;
+$black: #1a202c;
+$background: #ffffff;
+
+.cars-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+
+  .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+    border-radius: 20px;
+    background-color: $background;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .car-card {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .car-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .car-card-title {
+          h3 {
+            color: $black;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+          }
+          p {
+            font-size: 14px;
+            color: #90a3bf;
+          }
+        }
+
+        .heart-btn {
+          font-size: 24px;
+          cursor: pointer;
+          transition: 0.2s;
+          color: #ed3f3f;
+
+          &.active {
+            color: #ed3f3f;
+          }
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      .img-cont {
+        width: 100%;
+        height: 250px;
+        margin: 20px 0;
+
+        .car-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .rented-car-card {
+      width: 100%;
+    }
+
+    .car-card-specs {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      .spec-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        color: #90a3bf;
+
+        span {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .car-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+
+      .price-box {
+        .price-val {
+          font-size: 20px;
+          font-weight: 700;
+          color: $black;
+        }
+        .price-unit {
+          font-size: 14px;
+          color: #90a3bf;
+        }
+      }
+
+      .btn-rent {
+        background-color: $blue;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: darken($blue, 10%);
+        }
+      }
+    }
+  }
+}
+
+.content-title {
+  font-size: 24px;
+  color: $black;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  margin: 40px 20% 0px 20%;
+  // margin-top: 40px;
+  align-items: start;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-img-cont {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+.map-section {
+  margin-top: 80px;
+  width: 100%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1f1f1;
+
+  #carMap {
+    margin-top: 50px;
+    width: 50%;
+    height: 700px;
+  }
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+
+  .spec-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    i {
+      color: #3563e9;
+      font-size: 20px;
+    }
+    span {
+      display: block;
+      font-size: 12px;
+      color: #90a3bf;
+    }
+    strong {
+      font-size: 14px;
+      color: #1a202c;
+    }
+  }
+}
+
+.booking-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 1px solid #c3d4e9;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+}
+
+.total-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .final-price {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a202c;
+  }
+
+  .btn-confirm {
+    background: #3563e9;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    &:hover {
+      background: #2b52cc;
+    }
+  }
+}
+.thumbnails-cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+
+  .thumb-item {
+    width: 200px;
+    height: 170px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s;
+
+    &.active {
+      border-color: #3563e9;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+#accountContent {
+  margin-top: 30px;
+
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.rented-car-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  img {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .car-info {
+    flex: 1;
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    p {
+      margin: 4px 0;
+      color: #555;
+      font-size: 14px;
+    }
+  }
+
+  .total-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3563e9;
+  }
+}
+
+.filter-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+
+  button {
+    background: #3563e9;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #274bc5;
+    }
+  }
+
+  .capacity-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+#carsContainer {
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 500px;
+  gap: 25px;
+  .btn-rent {
+    background: #3563e9;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background: #274bc5;
+    }
+  }
+
+  .car-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+
+    p {
+      font-size: 14px;
+      color: #666;
+      margin: 2px 0;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: 600;
+      color: #3563e9;
+    }
+  }
+}
+
+#filterMain {
+  display: flex;
+}
+
+.add-container {
+  background: #f6f7f9;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  .add-wrapper {
+    display: flex;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  }
+
+  .add-illustration {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      object-fit: cover;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .capacity-filter {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  .add-form-container {
+    flex: 1;
+    padding: 40px;
+
+    .btn-confirm {
+      background: #3563e9;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #274bc5;
+      }
+    }
+    .input-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        font-size: 14px;
+        color: #90a3bf;
+        margin-bottom: 8px;
+      }
+
+      select,
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #c3d4e9;
+        border-radius: 10px;
+        background: #fff;
+        font-size: 16px;
+        color: #1a202c;
+
+        &:focus {
+          outline: none;
+          border-color: #3563e9;
+        }
+      }
+    }
+  }
+}
+
+//rent-page
+.rent-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  .rent-img {
+    width: 50%;
+  }
+
+  .rent-h1 {
+    font-size: 40px;
+    color: $blue;
+  }
+
+  .rent-h2 {
+    font-size: 25px;
+    color: $blue;
+  }
+
+  .rent-p {
+    font-size: 20px;
+    font-weight: 600;
+    color: gray;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2040px) {
+  #homeMain {
+    padding: 20px 20px;
+
+    .h2-text {
+      font-size: 20px;
+    }
+    .container-1 {
+      gap: 5%;
+      margin-bottom: 80px;
+
+      #rentCard,
+      #rentCard1 {
+        height: 400px;
+        padding: 10px 20px;
+
+        .bigH1 {
+          font-size: 20px;
+        }
+
+        .littleH1 {
+          font-size: 25px;
+        }
+
+        .pTeg {
+          font-size: 25px;
+          width: 70%;
+          margin-top: 50px;
+        }
+
+        #rentBtn {
+          padding: 15px 25px;
+        }
+      }
+    }
+  }
+
+  #filterToggleBtn {
+    display: none;
+  }
+  //carcard
+
+  .details-grid {
+    gap: 20px;
+    margin: 20px;
+  }
+  .map-section {
+    margin-top: 50px;
+    font-size: 30px;
+
+    #carMap {
+      margin-top: 50px;
+      height: 500px;
+    }
+  }
+
+  //register-main
+
+  #registerMain,
+  #loginMain {
+    padding: 0 20px;
+    img {
+      width: 50%;
+    }
+    #registerSection,
+    #loginSection {
+      margin-top: 80px;
+      #registrationForm,
+      #loginForm {
+        width: 50%;
+        gap: 10px;
+      }
+    }
+  }
+} //media 1024-1440px
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #mainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    padding: 50px 120px;
+    background-color: $background;
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      i {
+        color: #505050;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .logout-btn {
+        cursor: pointer;
+        padding: 10px;
+        border: 0;
+        color: white;
+        font-size: 20px;
+        border-radius: 10px;
+        background-color: rgb(216, 101, 19);
+      }
+    }
+
+    #logo {
+      color: $blue;
+      font-size: 28px;
+    }
+
+    #carsContainer {
+      flex: 1;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
+      grid-auto-rows: 500px;
+      gap: 25px;
+      .btn-rent {
+        background: #3563e9;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background: #274bc5;
+        }
+      }
+
+      .car-card {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        transition: 0.3s ease;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        img {
+          width: 100%;
+          height: 260px;
+          object-fit: cover;
+          border-radius: 12px;
+        }
+
+        h3 {
+          font-size: 18px;
+          margin: 5px 0;
+        }
+
+        p {
+          font-size: 14px;
+          color: #666;
+          margin: 2px 0;
+        }
+
+        .price {
+          font-size: 18px;
+          font-weight: 600;
+          color: #3563e9;
+        }
+      }
+    }
+
+    #register {
+      border: 0;
+      padding: 20px 30px;
+      border-radius: 10px;
+      background-color: $blue;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 3px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: blue;
+      }
+    }
+  }
+  #filterToggleBtn {
+    display: none;
+  }
+  #homeMain {
+    padding: 20px 30px;
+
+    .h2-text {
+      font-size: 20px;
+    }
+    .container-1 {
+      grid-template-columns: 1fr;
+      gap: 5%;
+      margin-bottom: 80px;
+
+      #rentCard,
+      #rentCard1 {
+        height: auto;
+        padding: 10px 20px;
+
+        .bigH1 {
+          font-size: 30px;
+        }
+
+        .littleH1 {
+          font-size: 35px;
+        }
+
+        .pTeg {
+          font-size: 35px;
+          width: 70%;
+          margin-top: 50px;
+        }
+
+        #rentBtn {
+          padding: 15px 25px;
+        }
+      }
+    }
+  }
+
+  .h2-text {
+    font-size: 30px !important;
+  }
+
+  //carcard
+  .details-grid {
+    gap: 20px;
+    margin: 0px;
+  }
+  .map-section {
+    margin-top: 50px;
+    font-size: 30px;
+
+    #carMap {
+      margin-top: 50px;
+      height: 500px;
+    }
+  }
+
+  //register-main
+
+  #registerMain,
+  #loginMain {
+    padding: 0 20px;
+    img {
+      width: 50%;
+    }
+    #registerSection,
+    #loginSection {
+      margin-top: 80px;
+      #registrationForm,
+      #loginForm {
+        width: 50%;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 368px) and (max-width: 767px) {
+  #mainHeader {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    background-color: $background;
+    position: relative;
+
+    // .burgerMenu{
+    // display: flex;
+    // justify-content: flex-end;
+    // }
+
+    // .burgerDiv{
+    //     overflow: hidden;
+    //     height: 100vh;
+    //     width: 0%;
+    //     background-color: #ececec;
+    //     position: fixed;
+    //     top: 0;
+    //     right: 0;
+    //     z-index: 2;
+    //     bottom: 0;
+    //     transition: all 0.3s ease-in-out;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     gap: 20px;
+
+    //     i{
+    //     color: $blue;
+    //     font-size: 50px;}
+
+    //     #closeBtn{
+    //     color: black;
+    //     }
+
+    // }
+
+    // .menuBtn{
+    // display: flex;
+    // font-size: 40px;}
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      // .fa-circle-plus,
+      // .fa-bell,
+      // .fa-gear,
+      // .logout-btn{
+      //     display: none;
+      // }
+
+      i {
+        color: #505050;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .logout-btn {
+        cursor: pointer;
+        padding: 10px;
+        border: 0;
+        color: white;
+        font-size: 20px;
+        border-radius: 10px;
+        background-color: rgb(216, 101, 19);
+      }
+    }
+
+    #logo {
+      color: $blue;
+      font-size: 28px;
+    }
+
+    #register {
+      border: 0;
+      padding: 20px 30px;
+      border-radius: 10px;
+      background-color: $blue;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 3px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: blue;
+      }
+    }
+  }
+
+  .filter-box {
+    display: none;
+  }
+
+  #homeMain {
+    padding: 10px;
+    margin: 0 !important;
+
+    .cont-position {
+      padding: 0;
+    }
+
+    .h2-text {
+      font-size: 18px;
+    }
+    .container-1 {
+      grid-template-columns: 1fr;
+      gap: 5%;
+      margin-bottom: 80px;
+
+      #rentCard,
+      #rentCard1 {
+        height: auto;
+        padding: 10px 20px;
+
+        .bigH1 {
+          font-size: 25px;
+        }
+
+        .littleH1 {
+          font-size: 25px;
+        }
+
+        .pTeg {
+          font-size: 20px;
+          width: 70%;
+          margin-top: 50px;
+        }
+
+        #rentBtn {
+          padding: 15px 25px;
+        }
+      }
+    }
+  }
+
+  .h2-text {
+    font-size: 30px !important;
+  }
+
+  #filterMain {
+    flex-direction: column;
+  }
+  #filterToggleBtn {
+    font-size: 25px;
+  }
+
+  #carsContainer {
+    flex: 1;
+    display: grid;
+    grid-auto-rows: 500px;
+    gap: 25px;
+    padding: 5px;
+    .btn-rent {
+      background: #3563e9;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background: #274bc5;
+      }
+    }
+
+    .car-card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      transition: 0.3s ease;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      span {
+        font-size: 15px !important;
+      }
+      img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+
+      h3 {
+        font-size: 18px;
+        margin: 5px 0;
+      }
+
+      p {
+        font-size: 14px;
+        color: #666;
+        margin: 2px 0;
+      }
+
+      .price {
+        font-size: 18px;
+        font-weight: 600;
+        color: #3563e9;
+      }
+    }
+  }
+
+  //search box
+
+  #messagesPanel {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    width: 80% !important;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    overflow: hidden;
+    font-size: 15px !important;
+
+    span {
+      font-size: 15px !important;
+    }
+  }
+
+  .add-illustration {
+    display: none !important;
+  }
+
+  .car-cont {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr) !important;
+    grid-auto-rows: auto !important;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 10px !important;
+
+    .card {
+      margin: 0 !important;
+      width: 100%;
+      display: block !important;
+      flex-direction: column;
+      padding: 5px !important;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: $background;
+      transition: all 0.3s ease-in-out;
+
+      .btn-rent {
+        font-size: 15px !important;
+      }
+
+      p {
+        font-size: 15px !important;
+      }
+
+      span {
+        font-size: 15px !important;
+      }
+      &:hover,
+      &:focus {
+        transform: translateY(-5px) !important;
+
+        .car-img {
+          width: 80% !important;
+          height: auto !important;
+          object-fit: cover;
+        } //car-img
+      } //img-cont
+    } //card
+  } //car-cont
+
+  .cars-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 30px;
+    padding: 20px 0;
+
+    .card {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      border-radius: 20px;
+      background-color: $background;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .car-card {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .car-card-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          .car-card-title {
+            h3 {
+              color: $black;
+              font-size: 20px;
+              font-weight: 700;
+              margin-bottom: 4px;
+            }
+            p {
+              font-size: 14px;
+              color: #90a3bf;
+            }
+          }
+
+          .heart-btn {
+            font-size: 24px;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #ed3f3f;
+
+            &.active {
+              color: #ed3f3f;
+            }
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+
+        .img-cont {
+          width: 100%;
+          height: 250px;
+          margin: 20px 0;
+
+          .car-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .car-card-specs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .spec-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 14px;
+          color: #90a3bf;
+
+          span {
+            font-size: 17px !important;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .car-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+
+        .price-box {
+          .price-val {
+            font-size: 20px;
+            font-weight: 700;
+            color: $black;
+          }
+          .price-unit {
+            font-size: 14px;
+            color: #90a3bf;
+          }
+        }
+
+        .btn-rent {
+          background-color: $blue;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 10px;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:hover {
+            background-color: darken($blue, 10%);
+          }
+        }
+      }
+    }
+  }
+
+  .add-form-container {
+    padding: 0px !important;
+  }
+  //carcard
+  .details-grid {
+    gap: 15px;
+    margin: 5px;
+
+    .main-img-cont {
+      width: 100%;
+    }
+
+    .thumbnails-cont {
+      justify-content: center;
+
+      .thumb-item {
+        width: 40%;
+        height: auto;
+      }
+    }
+  }
+
+  .rent-div {
+    .rent-img {
+      width: 80%;
+    }
+
+    .rent-h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+    .rent-h2 {
+      text-align: center;
+      font-size: 25px;
+    }
+    .rent-p {
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+
+  #filterToggleBtn {
+    display: flex;
+  }
+
+  .map-section {
+    margin-top: 50px;
+    font-size: 20px;
+
+    #carMap {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      width: 90%;
+      height: 400px;
+    }
+  }
+
+  .details-info {
+    width: 100%;
+    height: auto;
+
+    span {
+      font-size: 15px !important;
+    }
+
+    .specs-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+  .rented-car-card {
+    display: flex;
+    flex-direction: column !important;
+    gap: 20px;
+    align-items: center;
+    background: #ffffff;
+    padding: 0px !important;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    img {
+      width: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .car-info {
+      h3 {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      p {
+        margin: 4px 0;
+        color: #555;
+        font-size: 14px;
+      }
+    }
+
+    .total-price {
+      font-size: 18px;
+      font-weight: 600;
+      color: #3563e9;
+    }
+  }
+
+  #bellBadge {
+    width: 12px !important;
+    font-size: 14px !important;
+    height: 12px !important;
+  }
+
+  //register-main
+
+  #registerMain,
+  #loginMain {
+    padding: 0 20px;
+
+    #registerSection,
+    #loginSection {
+      display: flex;
+      justify-content: center;
+      margin-top: 80px;
+
+      .log-img {
+        display: none;
+      }
+
+      #registrationForm,
+      #loginForm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+    }
+  }
+
+  span {
+    font-size: 25px !important;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 367px) {
+  #mainHeader {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: $background;
+    position: relative;
+
+    .user-profile {
+      display: flex;
+      flex-wrap: wrap !important;
+      align-items: center;
+      gap: 5px;
+
+      i {
+        color: #505050;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .logout-btn {
+        cursor: pointer;
+        padding: 10px;
+        border: 0;
+        color: white;
+        font-size: 18px;
+        border-radius: 10px;
+        background-color: rgb(216, 101, 19);
+      }
+    }
+
+    #logo {
+      color: $blue;
+      font-size: 20px;
+    }
+
+    #register {
+      border: 0;
+      padding: 20px 30px;
+      border-radius: 10px;
+      background-color: $blue;
+      color: white;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 3px;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: blue;
+      }
+    }
+  }
+
+  .rent-div {
+    .rent-img {
+      width: 100%;
+    }
+
+    .rent-h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+    .rent-h2 {
+      text-align: center;
+      font-size: 18px;
+    }
+    .rent-p {
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+
+  #filterToggleBtn {
+    display: flex;
+  }
+  #filterMain {
+    flex-direction: column;
+  }
+
+  .filter-box {
+    display: none;
+  }
+
+  #homeMain {
+    padding: 10px !important;
+    margin: 0 !important;
+
+    .cont-position {
+      padding: 0 !important;
+    }
+
+    .h2-text {
+      font-size: 20px;
+    }
+    .container-1 {
+      grid-template-columns: 1fr;
+      gap: 5%;
+      margin-bottom: 80px;
+
+      #rentCard,
+      #rentCard1 {
+        height: auto;
+        padding: 10px 20px;
+
+        .bigH1 {
+          font-size: 20px;
+        }
+
+        .littleH1 {
+          font-size: 20px;
+        }
+
+        .pTeg {
+          font-size: 20px;
+          width: 70%;
+          margin-top: 50px;
+        }
+
+        #rentBtn {
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+
+  .h2-text {
+    font-size: 30px !important;
+  }
+
+  .add-illustration {
+    display: none !important;
+  }
+
+  .car-card {
+    .car-card-header {
+      padding: 10px;
+      i {
+        font-size: 20px !important;
+
+        &:hover,
+        &:focus {
+          color: red;
+        }
+      }
+
+      p {
+        font-size: 17px !important;
+      }
+
+      h3 {
+        color: $black;
+        font-size: 20px !important;
+        margin-bottom: 20px;
+      }
+    } //car-card-header
+  } //car-card
+
+  .car-card-specs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    p,
+    span {
+      font-size: 25px;
+      color: $black;
+    }
+  } //car-card-specs
+
+  .car-card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    span {
+      font-size: 15px !important;
+    }
+    .price-val {
+      font-size: 20px !important;
+      color: $blue;
+    }
+
+    .btn-rent {
+      font-size: 20px !important;
+      background-color: #3563e9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover,
+      &:focus {
+        background-color: #2b52cc;
+      }
+    }
+  } //car-card-footer
+
+  .car-cont {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) !important;
+    grid-auto-rows: 500px !important;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 10px;
+
+    .card {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px !important;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: $background;
+      transition: all 0.3s ease-in-out;
+
+      span {
+        font-size: 15px !important;
+      }
+      &:hover,
+      &:focus {
+        transform: translateY(-20px);
+      }
+
+      .img-cont {
+        width: 100%;
+        height: 200px !important;
+
+        .car-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        } //car-img
+      } //img-cont
+    } //card
+  } //car-cont
+
+  .details-grid {
+    gap: 5px;
+    margin: 0px;
+
+    .main-img-cont {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .thumbnails-cont {
+      justify-content: center;
+
+      .thumb-item {
+        width: 40%;
+        height: auto;
+      }
+    }
+  }
+  .log-img {
+    display: none;
+  }
+
+  #registerMain,
+  #loginMain {
+    padding: 0 20px;
+
+    #registerSection,
+    #loginSection {
+      display: flex;
+      justify-content: center;
+      margin-top: 80px;
+
+      .log-img {
+        display: none;
+      }
+
+      #registrationForm,
+      #loginForm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+    }
+  }
+
+  .map-section {
+    margin-top: 50px;
+    font-size: 20px;
+
+    #carMap {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      width: 90%;
+      height: 400px;
+    }
+
+    .details-info {
+      width: 100%;
+      height: auto;
+
+      span {
+        font-size: 15px !important;
+      }
+
+      .specs-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .booking-card {
+        .btn-confirm {
+          font-size: 12px;
+          padding: 10px;
+        }
+      }
+
+      #bellBadge {
+        width: 12px !important;
+        font-size: 14px !important;
+        height: 12px !important;
+      }
+
+      .add-form-container {
+        padding: 0 !important;
+      }
+
+      .cars-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
+        gap: 30px;
+        padding: 20px 0;
+
+        .card {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 24px;
+          border-radius: 20px;
+          background-color: $background;
+          transition: all 0.3s ease-in-out;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+
+          &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+          }
+
+          .car-card {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .car-card-header {
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+
+              .car-card-title {
+                h3 {
+                  color: $black;
+                  font-size: 20px;
+                  font-weight: 700;
+                  margin-bottom: 4px;
+                }
+                p {
+                  font-size: 14px;
+                  color: #90a3bf;
+                }
+              }
+
+              .heart-btn {
+                font-size: 24px;
+                cursor: pointer;
+                transition: 0.2s;
+                color: #ed3f3f;
+
+                &.active {
+                  color: #ed3f3f;
+                }
+
+                &:hover {
+                  transform: scale(1.2);
+                }
+              }
+            }
+
+            .img-cont {
+              width: 100%;
+              height: 250px;
+              margin: 20px 0;
+
+              .car-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+
+          .car-card-specs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .spec-item {
+              display: flex;
+              align-items: center;
+              gap: 6px;
+              font-size: 14px;
+              color: #90a3bf;
+
+              span {
+                font-size: 17px !important;
+                white-space: nowrap;
+              }
+            }
+          }
+
+          .car-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+
+            .price-box {
+              .price-val {
+                font-size: 20px;
+                font-weight: 700;
+                color: $black;
+              }
+              .price-unit {
+                font-size: 14px;
+                color: #90a3bf;
+              }
+            }
+
+            .btn-rent {
+              background-color: $blue;
+              color: white;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 10px;
+              font-size: 14px;
+              font-weight: 600;
+              cursor: pointer;
+              transition: 0.2s;
+
+              &:hover {
+                background-color: darken($blue, 10%);
+              }
+            }
+          }
+        }
+      }
+
+      .rented-car-card {
+        display: flex;
+        flex-direction: column !important;
+        gap: 20px;
+        align-items: center;
+        background: #ffffff;
+        padding: 0px !important;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+        transition: 0.3s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        img {
+          width: 150px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+
+        .car-info {
+          h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+          }
+
+          p {
+            margin: 4px 0;
+            color: #555;
+            font-size: 14px;
+          }
+        }
+
+        .total-price {
+          font-size: 18px;
+          font-weight: 600;
+          color: #3563e9;
+        }
+      }
+      .log-img {
+        display: none;
+      }
+    }
+  }
+}

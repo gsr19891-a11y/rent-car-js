@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="mainHeader">
+      <a href="index.html" id="logo"><h1>MORENT</h1></a>
+      <div id="authBlock">
+        <button id="register">რეგისტრაცია</button>
+      </div>
+    </header>
+    <main id="filterMain">
+      <i class="fa-solid fa-ellipsis" id="filterToggleBtn"></i>
+      <div class="filter-box">
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="ძებნა ბრენდის ან მოდელის მიხედვით"
+          />
+          <input type="text" id="city" placeholder="ქალაქი" />
+          <input type="number" id="minPrice" placeholder="მინ. ფასი" />
+          <input type="number" id="maxPrice" placeholder="მაქს. ფასი" />
+
+          <div class="capacity-filter">
+            <p>ტევადობა</p>
+            <label><input type="radio" name="capacity" value="2" /> 2</label>
+            <label><input type="radio" name="capacity" value="4" /> 4</label>
+            <label><input type="radio" name="capacity" value="5" /> 5</label>
+            <label><input type="radio" name="capacity" value="" /> ყველა</label>
+          </div>
+
+          <button id="filterBtn">გაფილტვრა</button>
+        </div>
+      </div>
+      <div id="carsContainer"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

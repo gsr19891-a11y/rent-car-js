@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="mainHeader">
+      <a href="index.html" id="logo"><h1>MORENT</h1></a>
+      <div id="authBlock">
+        <button id="register">რეგისტრაცია</button>
+      </div>
+    </header>
+
+    <main id="accountPage">
+      <section class="user-info-section">
+        <div class="profile-card">
+          <div class="avatar-circle" id="userAvatar">
+            <span id="initials">...</span>
+          </div>
+          <div class="name-details">
+            <h2 id="fullName">იტვირთება...</h2>
+          </div>
+        </div>
+      </section>
+
+      <nav class="account-navigation">
+        <ul>
+          <li>
+            <a href="#" id="rentedCarsLink">
+              <i class="fa-solid fa-car"></i> ნაქირავები მანქანები
+            </a>
+          </li>
+          <li>
+            <a href="#" id="myAdsLink">
+              <i class="fa-solid fa-wallet"></i> თქვენი განთავსებები
+            </a>
+          </li>
+
+          <li>
+            <a href="#" id="favoriteCarsLink">
+              <i class="fa-solid fa-heart"></i> რჩეული მანქანები
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section id="accountContent" class="content-display"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="mainHeader">
+      <a href="index.html" id="logo"><h1>MORENT</h1></a>
+
+      <div id="authBlock">
+        <button id="register">რეგისტრაცია</button>
+      </div>
+    </header>
+    <main id="homeMain">
+      <section class="container-1">
+        <div id="rentCard">
+          <h1 class="bigH1">საუკეთესო პლატფორმა</h1>
+          <h1 class="littleH1">მანქანის საქირავებლად</h1>
+          <p class="pTeg">მანქანის ქირაობა ასეთი ადვილი არასდროს ყოფილა.</p>
+          <button id="rentBtn" onclick="window.location.href = 'filter.html'">
+            იქირავე
+          </button>
+        </div>
+
+        <div id="rentCard1">
+          <h1 class="bigH1">მანქანის ქირაობა</h1>
+          <h1 class="littleH1">ასეთი ადვილი არასდროს ყოფილა</h1>
+          <p class="pTeg">იქირავე მანქანა სასურველ ფასში სასურველი დროით</p>
+          <button
+            id="rentBtn"
+            class="rentBtn"
+            onclick="window.location.href = 'filter.html'"
+          >
+            იქირავე
+          </button>
+        </div>
+      </section>
+      <h2 class="h2-text">პოპულარული მანქანები</h2>
+      <section class="cont-position">
+        <div class="car-cont" id="car-cont"></div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
